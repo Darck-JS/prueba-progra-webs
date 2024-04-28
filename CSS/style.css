@@ -30,3 +30,37 @@ div .form-control{
     border: 1px solid #ccc; /* Borde del formulario */
     background-color: #f9f9f9; /* Color de fondo del formulario */
   }
+
+.T_sucursal{
+    text-align: center;
+}
+
+.cartas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.card-img-suc{
+    width: 400px;
+    height: 300px;
+}
+
+.contenedor-sucursal{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    .btn{
+        background-color: green;
+    }
+    
+}
+
+.formulario{
+    display: flex;
+    background-color: rgb(107, 97, 97);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
