@@ -8,117 +8,80 @@
     <link href="/Primera_Entrega/CSS/style.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/Primera_Entrega/index.html">
-        <img src="/Primera_Entrega/IMG/Logo.jpg" alt="logo" width="60" height="60">
-        "ADVENTURE"
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Camionetas
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="pag1.html">RAM</a></li>
-            <li><a class="dropdown-item" href="pag2.html">Ford</a></li>
-            <li><a class="dropdown-item" href="pag3.html">Jeep</a></li>
-          </ul>
-        </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pag5.html">Contacto</a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/Primera_Entrega/index.html">
+          <img src="/Primera_Entrega/IMG/Logo.jpg" alt="logo" width="60" height="60">
+          "ADVENTURE"
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pag4.html">Sucursales</a>
-        </ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Camionetas
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="RAM.html">RAM</a></li>
+              <li><a class="dropdown-item" href="FORD.html">Ford</a></li>
+              <li><a class="dropdown-item" href="JEEP.html">Jeep</a></li>
+            </ul>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Sucursales.html">Sucursales</a>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <div class="contenedor" >
-      <BR>
-      <form class="formulario" >
-        <BR>
-        <DIV style="height: 50px; bottom: 50pxW;">
-          <h2>DATOS PERSONALES</h2>
-        </DIV>
-        <BR>
-        <div class="col-md-12">
-        <label for="validationDefault03" class="form-label">RUT</label>
-        <input type="text" class="form-control" id="validationDefault03" required>
+    </nav>
+  </header>
+    <div class="contenedor-form">
+      <form action="Contacto.html" id="formulario" target="_self" method="get" class="formulario">
+        <h2>Por favor ingresa tus datos:</h2>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nombre*</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa Nombre">
         </div>
-        <div class="col-md-12">
-          <label for="validationDefault01" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="validationDefault01" value="" required>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Apellido*</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa Apellido">
         </div>
-        <div class="col-md-12">
-          <label for="validationDefault02" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="validationDefault02" value="" required>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email*</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu Email">
         </div>
-        <div class="col-md-12">
-          <label for="validationDefaultUsername" class="form-label">Correo electrónico</label>
+        <div class="col-12">
+          <label for="telefono">Teléfono*</label>
           <div class="input-group">
-            <span class="input-group-text" id="inputGroupPrepend2">@</span>
-            <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+            <div class="input-group-text">+56</div>
+            <input type="tel" class="form-control" id="inlineFormInputGroupUsername" placeholder="Ingrese su telefono">
           </div>
         </div>
-        <div class="col-md-12" style="justify-content: center; text-align: center;">
-          <label for="validationDefault05" class="form-label">Teléfono</label>
-          <input type="text" class="form-control" id="validationDefault05" required>
-        </div>
-        <BR>
-        <h3>MODELO</h3>
-        <BR>
-        <div class="col-md-12" style="justify-content: center;" >
-          <label for="validationDefault04" class="form-label">Modelo</label>
-          <select class="form-select" id="validationDefault04" required>
-            <option selected disabled value="">Seleccione modelo...</option>
-            <option>...</option>
+        <br>
+        <div class="mb-3">
+          <label for="">Camioneta*</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected disabled>Seleccione una opcion</option>
+            <option value="1">Ram</option>
+            <option value="2">Ford</option>
+            <option value="3">Jeep</option>
           </select>
-          <BR>
-          <h3>DATOS UBICACIÓN</h3>
-          <BR>
-          <div class="col-md-12">
-            <label for="validationDefault04" class="form-label">Región</label>
-            <select class="form-select" id="validationDefault04" required>
-              <option selected disabled value="">Seleccione región...</option>
-              <option>...</option>
-            </select>
-            <div class="col-md-12">
-              <label for="validationDefault04" class="form-label">Comuna</label>
-              <select class="form-select" id="validationDefault04" required>
-                <option selected disabled value="">Seleccione comuna...</option>
-                <option>...</option>
-              </select>
-            <br>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-            <label class="form-check-label" for="invalidCheck2">
-              Autorizo el uso de mis datos personales
-            </label>
-          </div>
         </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-            <label class="form-check-label" for="invalidCheck2">
-              Acepto los 
-            </label>
-            <a href="https://www.ram.com/cl/privacy.html" target="_blank" data-bind="clickBubble: false;">Términos y Condiciones</a>
-          </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Enviar</button>
+        <div class="enviar">
+          <button class="btn btn-primary" id="enviar" type="submit">Enviar</button>
         </div>
       </form>
-      
-  </div>
-
+    </div>
 
   <br>
 

@@ -57,10 +57,27 @@ div .form-control{
     
 }
 
-.formulario{
+
+
+.contenedor-form{
     display: flex;
-    background-color: rgb(107, 97, 97);
-    justify-content: center;
-    text-align: center;
     align-items: center;
+    justify-content: space-around;
+    height: 50%;
+    
+
+    .formulario{
+        background-color: rgb(107, 97, 97);
+        text-align: left;
+        width: 40%;
+        border-radius: 30px;
+        
+        h2{
+            text-align: center;
+        }
+        .enviar{
+            text-align: center;
+
+        }
+    }
 }
