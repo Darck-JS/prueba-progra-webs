@@ -10,12 +10,43 @@ div .form-control{
     justify-content: center;
 }
 
-.Card{
+/* estilo de las cartas */
+.card-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height: 80vh; 
-}
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .card {
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Pie de pagina */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+  /*contenedor de texto*/
+  .text-conteiner{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+    /* titulo */
+  .titulo-conteiner{
+    margin: 3%;
+  }
 
 .contenedor {
     display: flex;
