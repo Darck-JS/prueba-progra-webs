@@ -28,6 +28,7 @@ div .form-control{
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
   }
+
   .card:hover {
     transform: translateY(-5px);
   }
@@ -68,11 +69,25 @@ footer {
     text-align: center;
 }
 
-.cartas{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.container_sucur{
+  display: grid;
+  background-color: #6e6c6c;
+  padding: 5px;
+}
 
+.card_suc {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: space-around;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #474747;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.card_suc:hover {
+  transform: translateY(-10px);
 }
 
 .card-img-suc{
@@ -81,9 +96,7 @@ footer {
 }
 
 .contenedor-sucursal{
-  display: grid;
-  place-items: center;
-  justify-content: space-around;
+  display: flex;
   text-align: center;
   .btn{
     background-color: green;
@@ -98,7 +111,6 @@ footer {
     justify-content: space-around;
     height: 50%;
     
-
     .formulario{
         background-color: rgb(107, 97, 97);
         text-align: left;
