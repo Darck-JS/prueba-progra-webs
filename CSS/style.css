@@ -19,13 +19,14 @@ div .form-control{
   }
 
   .card {
-    display: grid;
+    /*display: grid   --> Me altera todas las card */
     width: 300px;
     margin-bottom: 20px;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid #474747;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
   }
   .card:hover {
     transform: translateY(-5px);
