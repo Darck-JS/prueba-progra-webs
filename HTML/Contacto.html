@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="Contacto">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,32 +41,42 @@
       </div>
     </nav>
   </header>
+
+<h1 class="titulo-contacto mb-3" style="text-align: center;">
+  completa el formulario para entregarte mas informacion
+</h1>
+
+
     <div class="contenedor-form">
-      <form action="Contacto.html" id="formulario" target="_self" method="get" class="formulario">
+      <form action="Mantenimento.html" id="formulario" target="_self" method="get" class="formulario">
         <h2>Por favor ingresa tus datos:</h2>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Nombre*</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa Nombre">
+          <label for="rut" class="form-label"><b>Rut*</b></label>
+          <input type="text" class="form-control" id="rut" placeholder="Ingresa Rut" >
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Apellido*</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa Apellido">
+          <label for="nombre" class="form-label"><b>Nombre*</b></label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ingresa Nombre" >
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email*</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu Email">
+          <label for="apellido" class="form-label"><b>Apellido*</b></label>
+          <input type="text" class="form-control" id="apellido" placeholder="Ingresa Apellido" >
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label"><b>Email*</b></label>
+          <input type="email" class="form-control" id="correo" placeholder="Ingresa tu Email" >
         </div>
         <div class="col-12">
-          <label for="telefono">Teléfono*</label>
+          <label for="telefono"><b>Teléfono*</b></label>
           <div class="input-group">
             <div class="input-group-text">+56</div>
-            <input type="tel" class="form-control" id="inlineFormInputGroupUsername" placeholder="Ingrese su telefono">
+            <input type="tel" class="form-control" id="fono" placeholder="Ingrese su telefono" >
           </div>
         </div>
         <br>
         <div class="mb-3">
-          <label for="">Camioneta*</label>
-          <select class="form-select" aria-label="Default select example">
+          <label for=""><b>Camioneta*</b></label>
+          <select class="form-select" id="camioneta" aria-label="Default select example" >
             <option selected disabled>Seleccione una opcion</option>
             <option value="1">Ram</option>
             <option value="2">Ford</option>
@@ -74,16 +84,21 @@
           </select>
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+          <label for="exampleFormControlTextarea1" class="form-label"><b>Detalle su solicitud</b></label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <div class="enviar">
-          <button class="btn btn-primary" id="enviar" type="submit">Enviar</button>
+          <button class="btn btn-primary" id="Enviar" type="submit">Enviar</button>
         </div>
       </form>
     </div>
 
+
+
   <br>
+
+
+
 
   <footer>
     <div>
@@ -97,8 +112,8 @@
         
  
 
-
-
   <script src="/JS/bootstrap.bundle.min.js" ></script>
+  <script src="/JS/jquery-3.7.1.min.js"></script>
+  <script src="/JS/Funciones.js"></script>
 </body>
 </html>
