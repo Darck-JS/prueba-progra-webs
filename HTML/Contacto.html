@@ -6,6 +6,7 @@
     <title>Contacto</title>
     <link href="/CSS/bootstrap.min.css" rel="stylesheet">
     <link href="/CSS/style.css" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -51,26 +52,26 @@
       <form action="Mantenimento.html" id="formulario" target="_self" method="get" class="formulario">
         <h2>Por favor ingresa tus datos:</h2>
         <div class="mb-3">
-          <label for="rut" class="form-label"><b>Rut*</b></label>
-          <input type="text" class="form-control" id="rut" placeholder="Ingresa Rut" >
+          <label class="form-label"><b>Rut*</b></label>
+          <input type="text" class="form-control" id="rut" placeholder="Ingresa Rut" required>
         </div>
         <div class="mb-3">
-          <label for="nombre" class="form-label"><b>Nombre*</b></label>
-          <input type="text" class="form-control" id="nombre" placeholder="Ingresa Nombre" >
+          <label class="form-label"><b>Nombre*</b></label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ingresa Nombre" required>
         </div>
         <div class="mb-3">
-          <label for="apellido" class="form-label"><b>Apellido*</b></label>
-          <input type="text" class="form-control" id="apellido" placeholder="Ingresa Apellido" >
+          <label class="form-label"><b>Apellido*</b></label>
+          <input type="text" class="form-control" id="apellido" placeholder="Ingresa Apellido" required>
         </div>
         <div class="mb-3">
-          <label for="correo" class="form-label"><b>Email*</b></label>
-          <input type="email" class="form-control" id="correo" placeholder="Ingresa tu Email" >
+          <label class="form-label"><b>Email*</b></label>
+          <input type="email" class="form-control" id="correo" placeholder="Ingresa tu Email" required>
         </div>
         <div class="col-12">
           <label for="telefono"><b>Teléfono*</b></label>
           <div class="input-group">
             <div class="input-group-text">+56</div>
-            <input type="tel" class="form-control" id="fono" placeholder="Ingrese su telefono" >
+            <input type="tel" class="form-control" id="fono" placeholder="Ingrese su telefono" required>
           </div>
         </div>
         <br>
@@ -100,6 +101,24 @@
 
 
 
+  <script src="/JS/bootstrap.bundle.min.js" ></script>
+  <script src="/JS/jquery-3.7.1.min.js"></script>
+  <script src="/JS/Funciones.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#formulario").submit(function (event) {
+                
+                if (!validarForm()) {
+                  event.preventDefault();
+                }else{
+                  limpiar()
+                }
+  
+            });
+    });
+  </script>
+        
+
   <footer>
     <div>
       <IMG src="/IMG/Logo.jpg" style="width: 14rem; "></IMG>
@@ -109,11 +128,6 @@
       <p>&copy; Todos los derechos reservados. Los izquierdos también.</p>
     </div>
   </footer>
-        
- 
-
-  <script src="/JS/bootstrap.bundle.min.js" ></script>
-  <script src="/JS/jquery-3.7.1.min.js"></script>
-  <script src="/JS/Funciones.js"></script>
 </body>
+
 </html>

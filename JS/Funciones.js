@@ -1,16 +1,3 @@
-let map;
-
-async function initMap() {
-  //@ts-ignore
-    const { Map } = await google.maps.importLibrary("maps");
-
-    map = new Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-    });
-}
-
-initMap();
 
 /*
 // Mostrar el modal de detalles
@@ -52,19 +39,22 @@ var Fn = {
 	}
 }
 
-
-
-
-        $(document).ready(function () {
-
             function validarForm() {
                 var isValid = true;
                 var mensaje = "";
-                var nombre = $("#nombre").val().trim().length; //una forma de obtención
-                //var nombre =  document.getElementById("nombre").value; //Segunda forma de obtención
+                var rutCompleto = $("#rut").val().trim();
+                var rut = $("#rut").val().trim().length;
+                var nombre = $("#nombre").val().trim().length;
                 var apellido = $("#apellido").val().trim().length;
-                var email = $("#email").val().trim().length;
+                var email = $("#correo").val().trim().length;
+                var fono = $("#fono").val().trim().length;
 
+                if (rut == 0) {
+                  mensaje += "-Debe ingresar Rut\n";
+                }
+                else if (Fn.validaRut(rutCompleto)) {
+                  mensaje += "-Debe ingresar Rut valido\n";
+                }
                 if (nombre == 0) {
                     mensaje += "-Debe ingresar nombre\n";
                 }
@@ -74,7 +64,9 @@ var Fn = {
                 if (email == 0) {
                     mensaje += "-Debe ingresar correo\n";
                 }
-
+                if (fono == 0) {
+                  mensaje += "-Debe ingresar Fono\n";
+                }
                 if (mensaje.trim().length > 0) {
                     alert(mensaje);
                     isValid = false;
@@ -82,22 +74,9 @@ var Fn = {
                 return isValid;
 
             }
-
-            $("#formulario").submit(function (event) {
-                if (!validarForm()) {
-                    event.preventDefault(); //no envía formulario
-                } else {
-                    agregarRegistro();
-                    limpiar();
-                    event.preventDefault();
-                }
-            });
-
             function limpiar() {
                 $("#nombre").val("");
                 $("#apellido").val("");
                 $("#email").val("");
                 $("#textarea").val("");
-
             }
-        });
